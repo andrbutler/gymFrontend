@@ -277,6 +277,7 @@ export default {
               phase: "setLoaded",
               type: "address",
             });
+             this.$buefy.dialog.alert("Address updated successfully!");
             console.log(res);
           },
           (err) => {
@@ -312,6 +313,8 @@ export default {
         .then(
           (res) => {
             this.$buefy.dialog.alert("password successfully updated!");
+             this.password = null;
+            this.passwordValid = false;
             console.log(res);
           },
           (err) => {
@@ -355,6 +358,7 @@ export default {
               type: "info",
             });
             console.log(res);
+             this.$buefy.dialog.alert("Details updated successfully!");
           },
           (err) => {
             this.$buefy.dialog.alert(err.response.data.message);

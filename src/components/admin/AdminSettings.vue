@@ -61,6 +61,8 @@ export default {
         .then(
           (res) => {
             this.$buefy.dialog.alert("password successfully updated!");
+            this.password = null;
+            this.passwordValid = false;
             console.log(res);
           },
           (err) => {
