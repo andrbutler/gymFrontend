@@ -426,8 +426,8 @@
             <div class="column is-full">
               <h2 class="has-text-weight-semibold">Address:</h2>
               <p>
-                {{ $store.state.address.address1 }}
-                {{ $store.state.address.address1 }}
+                {{ $store.state.address.address1 }} 
+                {{ $store.state.address.address2 }}
               </p>
             </div>
             <div class="column is-full">
