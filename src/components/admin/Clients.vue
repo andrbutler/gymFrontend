@@ -382,7 +382,7 @@
                   @click="savePayment()"
                   class="is-success"
                 >
-                  Save Schedule
+                  Save
                 </b-button>
               </b-field>
             </div>
@@ -592,6 +592,7 @@ export default {
           sortable: true,
         },
         { field: "setNumber", label: "Set", centered: true },
+        { field: "exerciseName", label: "Exercise", sortable: true, searchable: true },
         { field: "reps", label: "Reps", centered: true },
         {
           field: "difficultyFeedback",
@@ -995,6 +996,7 @@ export default {
         if (s.difficultyFeedback > 0) {
           let x = { ...s };
           x.exerciseDate = new Date(s.exerciseDate).toDateString();
+          x.exerciseName = this.exerciseList[x.exerciseId];
           this.filteredDifficulty.push(x);
         }
       }
